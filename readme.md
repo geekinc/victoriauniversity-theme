@@ -1,12 +1,10 @@
-# CWP Starter Theme
+# Victoria University Theme
 
 [![Build Status](https://travis-ci.org/silverstripe/cwp-starter-theme.svg?branch=master)](https://travis-ci.org/silverstripe/cwp-starter-theme)
 [![Packagist](https://img.shields.io/packagist/v/cwp/starter-theme.svg)](https://packagist.org/packages/cwp/starter-theme)
 [![SilverStripe supported module](https://img.shields.io/badge/silverstripe-supported-0071C4.svg)](https://www.silverstripe.org/software/addons/silverstripe-commercially-supported-module-list/)
 
-This is the repository for the CWP "starter" theme. This theme is a highly accessible Bootstrap 4 theme which you can use as a starter for your CWP project.
-
-The [Wātea theme](https://github.com/silverstripe/cwp-watea-theme) can be installed on top of the [Starter theme](https://github.com/silverstripe/cwp-starter-theme) (see [cascading themes](https://docs.silverstripe.org/en/4/developer_guides/templates/themes)) to provide a more visually appealing start to a CWP website.
+This is the repository for the Victoria University theme. This theme is a highly accessible Bootstrap 4 theme.
 
 ![Screenshot](docs/images/screenshot.png)
 
@@ -15,12 +13,33 @@ The [Wātea theme](https://github.com/silverstripe/cwp-watea-theme) can be insta
 You can install this theme with Composer:
 
 ```
-composer require cwp/starter-theme
+{
+    "name": "my-agency/my-project",
+    "description": "My CWP project",
+    "require": {
+        "cwp/cwp-recipe-cms": "~2.3.0@stable",
+        "geekinc/victoriauniversity-theme": "2.x-dev"
+    },
+    "require-dev": {
+        "cwp/cwp-recipe-basic-dev": "1.0.1"
+    },
+    "config": {
+        "process-timeout": 900
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/geekinc/victoriauniversity-theme.git"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
 ```
 
 ## Documentation
 
-You can find documentation on how to use this theme in the CWP Developer Documentation: [Customising the starter theme](https://www.cwp.govt.nz/developer-docs/en/2/working_with_projects/customising_the_starter_theme/).
+You can find documentation on how to use this theme in the CWP Developer Documentation (where we cloned this repo from): [Customising the starter theme](https://www.cwp.govt.nz/developer-docs/en/2/working_with_projects/customising_the_starter_theme/).
 
 ## Requirements
 
